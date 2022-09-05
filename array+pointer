@@ -1,0 +1,99 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+
+int funone();
+int funtwo();
+
+int main()
+{
+    char aorb;
+    int zero=0;
+    printf("\nWelcome to National Cyber City's Web Development course.\n\n\n");
+    printf("-Section (A) has two teachers and\n");
+    printf("-Section (B) also has two teachers.\n\n");
+    printf("-Select the section you want to know more about.\n\n");
+    printf("-Select a section(A or B):only Capletter::");
+    scanf("%c",&aorb);
+    if(aorb=='A'){
+        printf("\n\tIn section A...\n");
+        printf("\n\t1.Sayar Kyaw Kyaw(Front-end)\n");
+        printf("\n\t2.Sayar Soe Maung(Back-end)\n\n");
+        printf("-Click zero(0) to see the teachers' details::");
+        scanf("%d",&zero);
+        if(zero==0){funone();}
+        printf("\n");
+        getch();
+    }
+    else if(aorb=='B'){
+        printf("\n\tIn section B...\n");
+        printf("\n\t1.Sayar Tin Win(Front-end)\n");
+        printf("\n\t2.Sayar Zaw Zaw(Back-end)\n\n");
+        printf("-Click zero(0) to see the teachers' details::");
+        scanf("%d",&zero);
+        if(zero==0){funtwo();}
+        printf("\n");
+        getch();
+    }
+    else{
+       printf("\n\tIncorrect typing!!!\n");
+       getch();
+    }
+    return 0;
+}
+
+
+
+
+
+int funone(){
+
+    int array[2]={1,2};
+    int *pointer;
+    pointer=&array;
+    for(int a=0;a<2;a++){
+            printf("\n\t%d.",pointer[a]);
+            switch(pointer[a]){
+        case 1:printf("About of Sayar Kyaw Kyaw;\n");
+               printf("\n\t\t-Name = Kyaw Kyaw\n");
+               printf("\n\t\t-Birthday = 1.4.1995\n");
+               printf("\n\t\t-University from which he graduated = Computer University Yangon\n");
+               printf("\n\t\t-Experience = Five years as a front-end developer in NCC\n");
+        }
+        switch(pointer[a]){
+        case 2:printf("About of Sayar Soe Maung;\n");
+               printf("\n\t\t-Name = Soe Maung\n");
+               printf("\n\t\t-Birthday = 15.6.1989\n");
+               printf("\n\t\t-University from which he graduated = Computer University Yangon\n");
+               printf("\n\t\t-Experience = Seven years as a back-end developer in NCC\n");
+        }
+
+        }
+}
+
+
+
+int funtwo(){
+
+    int array[2]={1,2};
+    int *pointer;
+    pointer=&array;
+    for(int a=0;a<2;a++){
+            printf("\n\t%d.",pointer[a]);
+            switch(pointer[a]){
+        case 1:printf("About of Sayar Tin Win;\n");
+               printf("\n\t\t-Name = Tin Win\n");
+               printf("\n\t\t-Birthday = 20.3.1985\n");
+               printf("\n\t\t-University from which he graduated = Computer University Yangon\n");
+               printf("\n\t\t-Experience = Four years as a front-end developer in NCC\n");
+        }
+        switch(pointer[a]){
+        case 2:printf("About of Sayar Zaw Zaw;\n");
+               printf("\n\t\t-Name = Zaw Zaw\n");
+               printf("\n\t\t-Birthday = 25.10.1990\n");
+               printf("\n\t\t-University from which he graduated = Computer University Yangon\n");
+               printf("\n\t\t-Experience = Six years as a back-end developer in NCC\n");
+        }
+
+        }
+}
